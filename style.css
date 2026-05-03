@@ -1,0 +1,460 @@
+/* =========================
+   GLOBAL / PAGE BACKGROUND
+   ========================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #271e0c;
+  font-size: 20px;
+  line-height: 1.6;
+  min-height: 200vh;
+  background: url("./images/background.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+.navbar {
+  width: 95vw;
+  margin: 0 auto 20px;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+.logo {
+  font-size: 72px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.login-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.lang-select,
+.login-btn {
+  padding: 12px 28px;
+  border-radius: 6px;
+  border: none;
+  background: #3a86b6;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lang-select {
+  padding-right: 40px;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+}
+
+nav a {
+  flex: 1;
+  margin: 0 5px;
+  padding: 18px 0;
+  text-decoration: none;
+  background: #2f6f99;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 6px;
+}
+
+
+/* =========================
+   SHARED HOVER EFFECTS
+   ========================= */
+.lang-select:hover,
+.login-btn:hover,
+nav a:hover,
+.cta button:hover,
+.carousel-arrow:hover {
+  background: #1f567a;
+}
+
+button,
+.lang-select,
+nav a {
+  transition: all 0.2s ease;
+}
+
+button:hover,
+.lang-select:hover,
+nav a:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   MAIN CONTAINER
+   ========================= */
+.container {
+  width: 95vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/* =========================
+   INTRO SECTION / MAIN BOX
+   ========================= */
+.intro-section {
+  width: 90%;
+  margin: 30px auto 50px;
+  padding: 50px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  border: 3px solid #3a86b6;
+  box-shadow: 0 0 0 6px rgba(58,134,182,0.2),
+              0 10px 30px rgba(0,0,0,0.12);
+}
+
+.intro-section h2 {
+  font-size: 44px;
+  margin-bottom: 15px;
+}
+
+.intro-lead {
+  font-size: 22px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  color: #333;
+}
+
+
+/* =========================
+   TOP THREE FEATURE BOXES
+   ========================= */
+.intro-points {
+  display: flex;
+  gap: 35px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.intro-point {
+  flex: 1;
+  min-height: 420px;
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  border: 3px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.intro-point:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.2);
+}
+
+
+/* =========================
+   TOP FEATURE BOX CONTENT
+   ========================= */
+.point-left {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.point-right {
+  width: 100%;
+  text-align: center;
+}
+
+.point-right h3 {
+  font-size: 32px;
+  margin: 10px 0 20px;
+}
+
+.point-right ul {
+  padding-left: 0;
+  margin: 0;
+  list-style-position: inside;
+}
+
+.point-right li {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+
+/* =========================
+   P5 ANIMATION BOXES
+   ========================= */
+#usage-animation,
+#money-animation,
+#home-animation {
+  width: 170px;
+  height: 140px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   THEMED TOP BOX COLOURS
+   ========================= */
+.track-box {
+  background: rgba(210, 235, 250, 0.88);
+  border-color: rgba(58, 134, 182, 0.75);
+}
+
+.money-box {
+  background: rgba(255, 239, 170, 0.88);
+  border-color: rgba(243, 198, 34, 0.8);
+}
+
+.house-box {
+  background: rgba(205, 235, 205, 0.88);
+  border-color: rgba(100, 180, 120, 0.8);
+}
+
+
+/* =========================
+   BOTTOM CARDS SECTION
+   ========================= */
+.cards {
+  display: flex;
+  gap: 35px;
+  margin-top: 50px;
+  align-items: stretch;
+}
+
+/* =========================
+   BOTTOM CARDS SECTION
+   ========================= */
+
+.cards {
+  display: flex;
+  gap: 35px;
+  margin-top: 50px;
+  align-items: stretch;
+}
+
+.card {
+  flex: 1;
+  height: 320px;
+  padding: 30px;
+
+  background: linear-gradient(
+    to bottom right,
+    rgba(255,255,255,0.95),
+    rgba(245,248,250,0.9)
+  );
+
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 20px;
+}
+
+.card h2 {
+  font-size: 72px;
+  margin: 10px 0;
+}
+
+
+/* =========================
+   CAROUSEL CARD
+   ========================= */
+
+.carousel-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-content {
+  width: 75%;
+  text-align: center;
+}
+
+.slide {
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.slide p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 34px;
+  height: 55px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #3a86b6;
+  color: white;
+
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.carousel-arrow.left {
+  left: 12px;
+}
+
+.carousel-arrow.right {
+  right: 12px;
+}
+/* =========================
+   CALL TO ACTION BUTTON
+   ========================= */
+.cta {
+  margin: 45px 0 30px;
+}
+
+.cta button {
+  background: #3a86b6;
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 18px 60px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+/* =========================
+   LOGIN MODAL
+   ========================= */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.55);
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999; /* keeps it above all page content */
+}
+
+.modal-content {
+  background: white;
+  padding: 35px;
+  border-radius: 14px;
+  width: 330px;
+  text-align: center;
+  position: relative;
+  z-index: 10000;
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.login-submit {
+  width: 95%;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background: #3a86b6;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-submit:hover {
+  background: #2f6f99;
+}
+
+.create-account {
+  margin-top: 18px;
+  font-size: 15px;
+}
+
+.create-account a {
+  color: #3a86b6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  cursor: pointer;
+  font-size: 24px;
+}

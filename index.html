@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <!-- =========================
+       META / PAGE SETUP
+       ========================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power in Flow</title>
+
+  <!-- Main stylesheet -->
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       LOGIN MODAL (POPUP)
+       ========================= -->
+
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeLogin()">×</span>
+
+```
+  <h2>Login</h2>
+
+  <input type="text" placeholder="Email">
+  <input type="password" placeholder="Password">
+
+  <button class="login-submit">Login</button>
+
+  <p class="create-account">
+    New here? <a href="#">Create account</a>
+  </p>
+</div>
+```
+
+  </div>
+
+  <!-- =========================
+       HEADER / NAVBAR
+       ========================= -->
+
+  <header class="navbar">
+
+```
+<!-- Logo (will be replaced later) -->
+<div class="logo">PiF</div>
+
+<!-- Language + Login -->
+<div class="login-row">
+  <select class="lang-select">
+    <option value="en">English</option>
+    <option value="hi">हिन्दी</option>
+    <option value="ar">العربية</option>
+    <option value="zh">中文</option>
+    <option value="ja">日本語</option>
+    <option value="tl">Filipino</option>
+  </select>
+
+  <button class="login-btn" onclick="openLogin()">Login / Sign up</button>
+</div>
+
+<!-- Navigation Links -->
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Energy Usage</a>
+  <a href="#">Bill Explanation</a>
+  <a href="#">Tips and Tricks</a>
+  <a href="#">Contact Us</a>
+</nav>
+```
+
+  </header>
+
+  <!-- =========================
+       MAIN CONTENT
+       ========================= -->
+
+  <main class="container">
+
+```
+<!-- =========================
+     TOP FEATURE BOXES
+     ========================= -->
+<section class="intro-section">
+
+  <h2>Smart Energy Insights for Every Household</h2>
+
+  <p class="intro-lead">
+    Power in Flow helps users understand energy usage, estimate costs,
+    and make better decisions before the next bill arrives.
+  </p>
+
+  <div class="intro-points">
+
+    <!-- TRACK USAGE -->
+    <div class="intro-point track-box">
+      <div class="point-left">
+        <div id="usage-animation"></div>
+      </div>
+
+      <div class="point-right">
+        <h3>Track Usage</h3>
+        <ul>
+          <li>View household energy usage clearly</li>
+          <li>Compare daily, weekly, and monthly patterns</li>
+          <li>Spot high-usage areas before bills arrive</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SAVE MONEY -->
+    <div class="intro-point money-box">
+      <div class="point-left">
+        <div id="money-animation"></div>
+      </div>
+
+      <div class="point-right">
+        <h3>Save Money</h3>
+        <ul>
+          <li>Estimate possible monthly savings</li>
+          <li>Receive practical energy-saving tips</li>
+          <li>Understand which habits affect costs most</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HOUSEHOLDS -->
+    <div class="intro-point house-box">
+      <div class="point-left">
+        <div id="home-animation"></div>
+      </div>
+
+      <div class="point-right">
+        <h3>Built for Households</h3>
+        <ul>
+          <li>Useful for renters, families, and homeowners</li>
+          <li>No complex technical setup required</li>
+          <li>Clear information without confusing bill language</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     BOTTOM CARDS (CAROUSELS)
+     ========================= -->
+<section class="cards">
+
+  <!-- CARD 1 -->
+  <div class="card carousel-card">
+    <button class="carousel-arrow left" onclick="changeCarouselSlide('offer', -1)">‹</button>
+
+    <div class="carousel-content">
+      <div class="slide offer-slide active">
+        <h3>Usage Dashboard</h3>
+        <p>View daily, weekly, and monthly energy usage in a simple visual dashboard.</p>
+      </div>
+
+      <div class="slide offer-slide">
+        <h3>Graph Options</h3>
+        <p>Switch between bar graphs, line graphs, and pie charts.</p>
+      </div>
+
+      <div class="slide offer-slide">
+        <h3>Cost Estimation</h3>
+        <p>Estimate energy costs before the next bill arrives.</p>
+      </div>
+
+      <div class="slide offer-slide">
+        <h3>Bill Breakdown</h3>
+        <p>Turn confusing bill information into clear usage categories.</p>
+      </div>
+    </div>
+
+    <button class="carousel-arrow right" onclick="changeCarouselSlide('offer', 1)">›</button>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="card carousel-card">
+    <button class="carousel-arrow left" onclick="changeCarouselSlide('savings', -1)">‹</button>
+
+    <div class="carousel-content">
+      <div class="slide savings-slide active">
+        <h3>Average Savings</h3>
+        <h2>$150</h2>
+        <p>Estimated yearly savings through smarter energy habits.</p>
+      </div>
+
+      <div class="slide savings-slide">
+        <h3>Partnered With</h3>
+        <p>Energy providers, smart meters, and household systems.</p>
+      </div>
+
+      <div class="slide savings-slide">
+        <h3>PiF AI Assistant</h3>
+        <p>Explains usage and suggests cost-saving actions.</p>
+      </div>
+
+      <div class="slide savings-slide">
+        <h3>Smart Recommendations</h3>
+        <p>Personalised suggestions based on your usage.</p>
+      </div>
+    </div>
+
+    <button class="carousel-arrow right" onclick="changeCarouselSlide('savings', 1)">›</button>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="card carousel-card">
+    <button class="carousel-arrow left" onclick="changeCarouselSlide('tips', -1)">‹</button>
+
+    <div class="carousel-content">
+      <div class="slide tips-slide active">
+        <h3>Tips and Tricks</h3>
+        <p>Helpful advice to reduce energy use and lower bills.</p>
+      </div>
+
+      <div class="slide tips-slide">
+        <h3>Peak Hour Usage</h3>
+        <p>Run appliances during off-peak hours.</p>
+      </div>
+
+      <div class="slide tips-slide">
+        <h3>Efficient Lighting</h3>
+        <p>Switch to LED lighting.</p>
+      </div>
+
+      <div class="slide tips-slide">
+        <h3>Appliance Habits</h3>
+        <p>Turn appliances off at the wall.</p>
+      </div>
+    </div>
+
+    <button class="carousel-arrow right" onclick="changeCarouselSlide('tips', 1)">›</button>
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <button>Get started now →</button>
+</section>
+```
+
+  </main>
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+    Privacy Policy | Terms | Help | Social Media Links
+  </footer>
+
+  <!-- =========================
+       SCRIPTS
+       ========================= -->
+
+  <!-- p5 animations -->
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+
+  <script src="usageanimations.js"></script>
+
+  <!-- LOGIN CONTROL -->
+
+  <script>
+    function openLogin() {
+      document.getElementById("login-modal").style.display = "flex";
+    }
+
+    function closeLogin() {
+      document.getElementById("login-modal").style.display = "none";
+    }
+  </script>
+
+  <!-- CAROUSEL LOGIC -->
+
+  <script>
+    const carouselIndexes = {
+      offer: 0,
+      savings: 0,
+      tips: 0
+    };
+
+    function changeCarouselSlide(type, direction) {
+      const slides = document.querySelectorAll("." + type + "-slide");
+
+      slides[carouselIndexes[type]].classList.remove("active");
+
+      carouselIndexes[type] += direction;
+
+      if (carouselIndexes[type] < 0) {
+        carouselIndexes[type] = slides.length - 1;
+      }
+
+      if (carouselIndexes[type] >= slides.length) {
+        carouselIndexes[type] = 0;
+      }
+
+      slides[carouselIndexes[type]].classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
